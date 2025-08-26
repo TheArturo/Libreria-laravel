@@ -3,30 +3,47 @@
 ## Quick Start
 
 ### Clone the repo
+```bash
 git clone https://github.com/tauseedzaman/laravel-library-management-system
+```
 
 ### Change current directory
+```bash
 cd Laravel-library-management-system
+```
 
 ### Install dependencies
+```bash
 composer install
+```
 
 ### Install JS dependencies
+```bash
 npm install && npm run dev
+```
 
 ### Create .env file
-cp .env.example .env
-# (Windows) copy .env.example .env
+```bash
+cp (unix) or copy (Windows) .env.example .env
+```
 
 ### Generate env key
+```bash
 php artisan key:generate
+```
 
-### Migrate and seed the database
+### Migrate the migration and seed the database
+```bash
 php artisan migrate:fresh --seed
+```
 
 ### Start server
+```bash
 php artisan serve
+```
 
 ### Credentials
-username: tauseedzaman  
+```text
+username: tauseedzaman
 password: password
+```
