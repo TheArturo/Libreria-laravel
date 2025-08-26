@@ -1,49 +1,49 @@
-# Laravel Library Management System
+# Sistema de Gestión de Biblioteca en Laravel
 
-## Quick Start
+## Inicio Rápido
 
-### Clone the repo
+### Clonar el repositorio
 ```bash
 git clone https://github.com/tauseedzaman/laravel-library-management-system
 ```
 
-### Change current directory
+### Cambiar al directorio del proyecto
 ```bash
 cd Laravel-library-management-system
 ```
 
-### Install dependencies
+### Instalar dependencias de PHP
 ```bash
 composer install
 ```
 
-### Install JS dependencies
+### Instalar dependencias de JavaScript
 ```bash
 npm install && npm run dev
 ```
 
-### Create .env file
+### Crear archivo .env
 ```bash
-cp (unix) or copy (Windows) .env.example .env
+cp (unix) o copy (Windows) .env.example .env
 ```
 
-### Generate env key
+### Generar clave de la aplicación
 ```bash
 php artisan key:generate
 ```
 
-### Migrate the migration and seed the database
+### Migrar y poblar la base de datos
 ```bash
 php artisan migrate:fresh --seed
 ```
 
-### Start server
+### Iniciar el servidor
 ```bash
 php artisan serve
 ```
 
-### Credentials
+### Credenciales
 ```text
-username: tauseedzaman
-password: password
+usuario: tauseedzaman
+contraseña: password
 ```
