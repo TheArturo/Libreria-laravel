@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <h2 class="admin-heading">Update Author</h2>
+                <h2 class="admin-heading">Actualizar Autor</h2>
             </div>
         </div>
         <div class="row">
@@ -13,7 +13,7 @@
                     autocomplete="off">
                     @csrf
                     <div class="form-group">
-                        <label>Author Name</label>
+                        <label>Nombre del Autor</label>
                         <input type="text" class="form-control @error('name') isinvalid @enderror" name="name"
                             value="{{ $auther->name }}" required>
                         @error('name')
@@ -22,7 +22,7 @@
                             </div>
                         @enderror
                     </div>
-                    <input type="submit" name="submit" class="btn btn-danger" value="Update" required>
+                    <input type="submit" name="submit" class="btn btn-danger" value="Actualizar" required>
                 </form>
             </div>
         </div>

@@ -4,10 +4,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <h2 class="admin-heading">Add Book Issue</h2>
+                    <h2 class="admin-heading">Agregar Préstamo de Libro</h2>
                 </div>
                 <div class="offset-md-7 col-md-2">
-                    <a class="add-new" href="{{ route('book_issued') }}">All Issue List</a>
+                    <a class="add-new" href="{{ route('book_issued') }}">Lista de Préstamos</a>
                 </div>
             </div>
             <div class="row">
@@ -16,9 +16,9 @@
                         autocomplete="off">
                         @csrf
                         <div class="form-group">
-                            <label>Student Name</label>
+                            <label>Nombre del Estudiante</label>
                             <select class="form-control" name="student_id" required>
-                                <option value="">Select Name</option>
+                                <option value="">Selecciona Nombre</option>
                                 @foreach ($students as $student)
                                     <option value='{{ $student->id }}'>{{ $student->name }}</option>
                                 @endforeach
@@ -30,9 +30,9 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Book Name</label>
+                            <label>Nombre del Libro</label>
                             <select class="form-control" name="book_id" required>
-                                <option value="">Select Name</option>
+                                <option value="">Selecciona Nombre</option>
                                 @foreach ($books as $book)
                                     <option value='{{ $book->id }}'>{{ $book->name }}</option>
                                 @endforeach
@@ -43,7 +43,7 @@
                                 </div>
                             @enderror
                         </div>
-                        <input type="submit" name="save" class="btn btn-danger" value="save">
+                        <input type="submit" name="save" class="btn btn-danger" value="guardar">
                     </form>
                 </div>
             </div>

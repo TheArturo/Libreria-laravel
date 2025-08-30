@@ -60,10 +60,10 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Publisher</label>
+                            <label>Editorial</label>
                             <select class="form-control @error('publisher_id') isinvalid @enderror "
                                 name="publisher_id" >
-                                <option value="">Select Publisher</option>
+                                <option value="">Selecciona Editorial</option>
                                 @foreach ($publishers as $publisher)
                                     @if ($publisher->id == $book->publisher_id)
                                         <option value="{{ $publisher->id }}" selected>{{ $publisher->name }}</option>
@@ -78,7 +78,7 @@
                                 </div>
                             @enderror
                         </div>
-                        <input type="submit" name="save" class="btn btn-danger" value="Update" >
+                        <input type="submit" name="save" class="btn btn-danger" value="Actualizar" >
                     </form>
                 </div>
             </div>

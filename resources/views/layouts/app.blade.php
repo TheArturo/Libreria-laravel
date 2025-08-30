@@ -25,11 +25,11 @@
                     <div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Hi {{ auth()->user()->name }}
+                            Hola {{ auth()->user()->name }}
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="{{ route('change_password') }}">Change Password</a>
-                            <a class="dropdown-item" href="#" onclick="document.getElementById('logoutForm').submit()">Log Out</a>
+                            <a class="dropdown-item" href="{{ route('change_password') }}">Cambiar Contraseña</a>
+                            <a class="dropdown-item" href="#" onclick="document.getElementById('logoutForm').submit()">Cerrar Sesión</a>
                         </div>
                         <form method="post" id="logoutForm" action="{{ route('logout') }}">
                             @csrf
@@ -45,15 +45,15 @@
             <div class="row">
                 <div class="col-md-12">
                     <ul class="menu">
-                        <li><a href="{{ route('dashboard') }}">Dashboard</a></li>
-                        <li><a href="{{ route('authors') }}">Authors</a></li>
-                        <li><a href="{{ route('publishers') }}">Publishers</a></li>
-                        <li><a href="{{ route('categories') }}">Categories</a></li>
-                        <li><a href="{{ route('books') }}">Books</a></li>
-                        <li><a href="{{ route('students') }}">Reg Students</a></li>
-                        <li><a href="{{ route('book_issued') }}">Book Issue</a></li>
-                        <li><a href="{{ route('reports') }}">Reports</a></li>
-                        <li><a href="{{ route('settings') }}">Settings</a></li>
+                        <li><a href="{{ route('dashboard') }}">Inicio</a></li>
+                        <li><a href="{{ route('authors') }}">Autores</a></li>
+                        <li><a href="{{ route('publishers') }}">Editoriales</a></li>
+                        <li><a href="{{ route('categories') }}">Categorías</a></li>
+                        <li><a href="{{ route('books') }}">Libros</a></li>
+                        <li><a href="{{ route('students') }}">Estudiantes Registrados</a></li>
+                        <li><a href="{{ route('book_issued') }}">Préstamo de Libros</a></li>
+                        <li><a href="{{ route('reports') }}">Reportes</a></li>
+                        <li><a href="{{ route('settings') }}">Configuración</a></li>
                     </ul>
                 </div>
             </div>

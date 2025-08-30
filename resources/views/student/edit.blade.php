@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <h2 class="admin-heading">Update Student</h2>
+                    <h2 class="admin-heading">Actualizar Estudiante</h2>
                 </div>
             </div>
             <div class="row">
@@ -13,8 +13,8 @@
                         autocomplete="off">
                         @csrf
                         <div class="form-group">
-                            <label>Student Name</label>
-                            <input type="text" class="form-control" placeholder="Student Name" name="name"
+                            <label>Nombre del Estudiante</label>
+                            <input type="text" class="form-control" placeholder="Nombre del Estudiante" name="name"
                                 value="{{ $student->name }}" required>
                             @error('name')
                                 <div class="alert alert-danger" role="alert">
@@ -23,8 +23,8 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Address</label>
-                            <input type="text" class="form-control" placeholder="Address" name="address"
+                            <label>Dirección</label>
+                            <input type="text" class="form-control" placeholder="Dirección" name="address"
                                 value="{{ $student->address }}" required>
                             @error('address')
                                 <div class="alert alert-danger" role="alert">
@@ -33,12 +33,12 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Gender</label>
+                            <label>Género</label>
                             <select name="gender" class="form-control">
-                                @if ($student->gneder == 'male')
-                                    <option value="male" selected>Male</option>
+                                @if ($student->gender == 'male')
+                                    <option value="male" selected>Masculino</option>
                                 @else
-                                    <option value="female" selected>Female</option>
+                                    <option value="female" selected>Femenino</option>
                                 @endif
                             </select>
                             @error('gender')
@@ -48,8 +48,8 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Class</label>
-                            <input type="text" class="form-control" placeholder="Class" name="class"
+                            <label>Clase</label>
+                            <input type="text" class="form-control" placeholder="Clase" name="class"
                                 value="{{ $student->class }}" required>
                             @error('class')
                                 <div class="alert alert-danger" role="alert">
@@ -58,8 +58,8 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Age</label>
-                            <input type="number" class="form-control" placeholder="Age" name="age"
+                            <label>Edad</label>
+                            <input type="number" class="form-control" placeholder="Edad" name="age"
                                 value="{{ $student->age }}" required>
                             @error('age')
                                 <div class="alert alert-danger" role="alert">
@@ -68,8 +68,8 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Phone</label>
-                            <input type="phone" class="form-control" placeholder="Phone" name="phone"
+                            <label>Teléfono</label>
+                            <input type="phone" class="form-control" placeholder="Teléfono" name="phone"
                                 value="{{ $student->phone }}" required>
                             @error('phone')
                                 <div class="alert alert-danger" role="alert">
@@ -87,7 +87,7 @@
                                 </div>
                             @enderror
                         </div>
-                        <input type="submit" name="save" class="btn btn-danger" value="Update">
+                        <input type="submit" name="save" class="btn btn-danger" value="Actualizar">
                     </form>
                 </div>
             </div>

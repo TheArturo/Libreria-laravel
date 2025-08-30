@@ -4,10 +4,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <h2 class="admin-heading">Add Student</h2>
+                    <h2 class="admin-heading">Añadir Estudiante</h2>
                 </div>
                 <div class="offset-md-7 col-md-2">
-                    <a class="add-new" href="{{ route('students') }}">All Students</a>
+                    <a class="add-new" href="{{ route('students') }}">Todos los Estudiantes</a>
                 </div>
             </div>
             <div class="row">
@@ -15,8 +15,8 @@
                     <form class="yourform" action="{{ route('student.store') }}" method="post" autocomplete="off">
                         @csrf
                         <div class="form-group">
-                            <label>Student Name</label>
-                            <input type="text" class="form-control" placeholder="Student Name" name="name"
+                            <label>Nombre del Estudiante</label>
+                            <input type="text" class="form-control" placeholder="Nombre del Estudiante" name="name"
                                 value="{{ old('name') }}" required>
                             @error('name')
                                 <div class="alert alert-danger" role="alert">
@@ -25,8 +25,8 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Address</label>
-                            <input type="text" class="form-control" placeholder="Address" name="address"
+                            <label>Dirección</label>
+                            <input type="text" class="form-control" placeholder="Dirección" name="address"
                                 value="{{ old('address') }}" required>
                             @error('address')
                                 <div class="alert alert-danger" role="alert">
@@ -35,10 +35,10 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Gender</label>
+                            <label>Género</label>
                             <select name="gender" class="form-control">
-                                <option value="male" selected>Male</option>
-                                <option value="female">Female</option>
+                                <option value="male" selected>Masculino</option>
+                                <option value="female">Femenino</option>
                             </select>
                             @error('gender')
                                 <div class="alert alert-danger" role="alert">
@@ -47,8 +47,8 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Class</label>
-                            <input type="text" class="form-control" placeholder="Class" name="class"
+                            <label>Clase</label>
+                            <input type="text" class="form-control" placeholder="Clase" name="class"
                                 value="{{ old('class') }}" required>
                             @error('class')
                                 <div class="alert alert-danger" role="alert">
@@ -57,8 +57,8 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Age</label>
-                            <input type="number" class="form-control" placeholder="Age" name="age"
+                            <label>Edad</label>
+                            <input type="number" class="form-control" placeholder="Edad" name="age"
                                 value="{{ old('age') }}" required>
                             @error('age')
                                 <div class="alert alert-danger" role="alert">
@@ -67,8 +67,8 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Phone</label>
-                            <input type="phone" class="form-control" placeholder="Phone" name="phone"
+                            <label>Teléfono</label>
+                            <input type="phone" class="form-control" placeholder="Teléfono" name="phone"
                                 value="{{ old('phone') }}" required>
                             @error('phone')
                                 <div class="alert alert-danger" role="alert">
@@ -86,7 +86,7 @@
                                 </div>
                             @enderror
                         </div>
-                        <input type="submit" name="save" class="btn btn-danger" value="save">
+                        <input type="submit" name="save" class="btn btn-danger" value="Guardar">
                     </form>
                 </div>
             </div>

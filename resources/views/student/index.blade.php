@@ -4,10 +4,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h2 class="admin-heading">All Students</h2>
+                    <h2 class="admin-heading">Todos los Estudiantes</h2>
                 </div>
                 <div class="offset-md-6 col-md-2">
-                    <a class="add-new" href="{{ route('student.create') }}">Add Student</a>
+                    <a class="add-new" href="{{ route('student.create') }}">Añadir Estudiante</a>
                 </div>
             </div>
             <div class="row">
@@ -15,14 +15,14 @@
                     <div class="message"></div>
                     <table class="content-table">
                         <thead>
-                            <th>S.No</th>
-                            <th>Student Name</th>
-                            <th>Gender</th>
-                            <th>Phone</th>
-                            <th>Email</th>
-                            <th>View</th>
-                            <th>Edit</th>
-                            <th>Delete</th>
+                            <th>N°</th>
+                            <th>Nombre del estudiante</th>
+                            <th>Género</th>
+                            <th>Teléfono</th>
+                            <th>Correo electrónico</th>
+                            <th>Ver</th>
+                            <th>Editar</th>
+                            <th>Eliminar</th>
                         </thead>
                         <tbody>
                             @forelse ($students as $student)
@@ -34,22 +34,22 @@
                                     <td>{{ $student->email }}</td>
                                     <td class="view">
                                         <button data-sid='{{ $student->id }}>'
-                                            class="btn btn-primary view-btn">View</button>
+                                            class="btn btn-primary view-btn">Ver</button>
                                     </td>
                                     <td class="edit">
-                                        <a href="{{ route('student.edit', $student) }}>" class="btn btn-success">Edit</a>
+                                        <a href="{{ route('student.edit', $student) }}>" class="btn btn-success">Editar</a>
                                     </td>
                                     <td class="delete">
                                         <form action="{{ route('student.destroy', $student->id) }}" method="post"
                                             class="form-hidden">
-                                            <button class="btn btn-danger delete-student">Delete</button>
+                                            <button class="btn btn-danger delete-student">Eliminar</button>
                                             @csrf
                                         </form>
                                     </td>
                                 </tr>
                             @empty
                                 <tr>
-                                    <td colspan="8">No Students Found</td>
+                                    <td colspan="8">No se encontraron estudiantes</td>
                                 </tr>
                             @endforelse
                         </tbody>
@@ -77,7 +77,7 @@
                 type: "get",
                 success: function(student) {
                     console.log(student);
-                    form ="<tr><td>Student Name :</td><td><b>"+student['name']+"</b></td></tr><tr><td>Address :</td><td><b>"+student['address']+"</b></td></tr><tr><td>Gender :</td><td><b>"+ student['gender']+ "</b></td></tr><tr><td>Class :</td><td><b>"+ student['class']+ "</b></td></tr><tr><td>Age :</td><td><b>"+ student['age']+ "</b></td></tr><tr><td>Phone :</td><td><b>"+ student['phone']+ "</b></td></tr><tr><td>Email :</td><td><b>"+ student['email']+ "</b></td></tr>";
+                    form ="<tr><td>Nombre del estudiante :</td><td><b>"+student['name']+"</b></td></tr><tr><td>Dirección :</td><td><b>"+student['address']+"</b></td></tr><tr><td>Género :</td><td><b>"+ student['gender']+ "</b></td></tr><tr><td>Clase :</td><td><b>"+ student['class']+ "</b></td></tr><tr><td>Edad :</td><td><b>"+ student['age']+ "</b></td></tr><tr><td>Teléfono :</td><td><b>"+ student['phone']+ "</b></td></tr><tr><td>Correo electrónico :</td><td><b>"+ student['email']+ "</b></td></tr>";
           console.log(form);
 
                     $("#modal-form table").html(form);

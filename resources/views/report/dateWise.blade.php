@@ -4,12 +4,12 @@
         <div class="container">
             <div class="row">
                 <div class="offset-md-3 col-md-6">
-                    <h2 class="admin-heading text-center">Date Wise Book Issue Report</h2>
+                    <h2 class="admin-heading text-center">Reporte de libros emitidos por fecha</h2>
                 </div>
             </div>
             <div class="row">
                 <div class="offset-md-4 col-md-4">
-                    <form class="yourform mb-5" action="{{ route('reports.date_wise_generate') }}" method="post">
+                <form class="yourform mb-5" action="{{ route('reports.date_wise_generate') }}" method="post">
                         @csrf
                         <div class="form-group">
                             <input type="date" name="date" class="form-control" value="{{ date('Y-m-d') }}">
@@ -19,7 +19,7 @@
                                 </div>
                             @enderror
                         </div>
-                        <input type="submit" class="btn btn-danger" name="search_date" value="Search">
+                        <input type="submit" class="btn btn-danger" name="search_date" value="Buscar">
                     </form>
                 </div>
             </div>
@@ -28,12 +28,12 @@
                     <div class="col-md-12">
                         <table class="content-table">
                             <thead>
-                                <th>S.No</th>
-                                <th>Student Name</th>
-                                <th>Book Name</th>
-                                <th>Phone</th>
-                                <th>Email</th>
-                                <th>Issue Date</th>
+                                <th>N°</th>
+                                <th>Nombre del estudiante</th>
+                                <th>Nombre del libro</th>
+                                <th>Teléfono</th>
+                                <th>Correo electrónico</th>
+                                <th>Fecha de emisión</th>
                             </thead>
                             <tbody>
                                 @forelse ($books as $book)

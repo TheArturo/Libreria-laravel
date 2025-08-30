@@ -4,10 +4,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <h2 class="admin-heading">Add Book</h2>
+                    <h2 class="admin-heading">Agregar libro</h2>
                 </div>
                 <div class="offset-md-7 col-md-2">
-                    <a class="add-new" href="{{ route('books') }}">All Books</a>
+                    <a class="add-new" href="{{ route('books') }}">Todos los libros</a>
                 </div>
             </div>
             <div class="row">
@@ -15,9 +15,9 @@
                     <form class="yourform" action="{{ route('book.store') }}" method="post" autocomplete="off">
                         @csrf
                         <div class="form-group">
-                            <label>Book Name</label>
+                            <label>Nombre del libro</label>
                             <input type="text" class="form-control @error('name') isinvalid @enderror"
-                                placeholder="Book Name" name="name" value="{{ old('name') }}" required>
+                                placeholder="Nombre del libro" name="name" value="{{ old('name') }}" required>
                             @error('name')
                                 <div class="alert alert-danger" role="alert">
                                     {{ $message }}
@@ -25,9 +25,9 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Category</label>
+                            <label>Categoría</label>
                             <select class="form-control @error('category_id') isinvalid @enderror " name="category_id" required>
-                                <option value="">Select Category</option>
+                                <option value="">Selecciona una categoría</option>
                                 @foreach ($categories as $category)
                                     <option value="{{ $category->id }}">{{ $category->name }}</option>
                                 @endforeach
@@ -39,9 +39,9 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Author</label>
+                            <label>Autor</label>
                             <select class="form-control @error('auther_id') isinvalid @enderror " name="auther_id" required>
-                                <option value="">Select Author</option>
+                                <option value="">Selecciona un autor</option>
                                 @foreach ($authors as $author)
                                     <option value='{{ $author->id }}'>{{ $author->name }}</option>";
                                 @endforeach
@@ -53,9 +53,9 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Publisher</label>
+                            <label>Editorial</label>
                             <select class="form-control @error('publisher_id') isinvalid @enderror " name="publisher_id" required>
-                                <option value="">Select Publisher</option>
+                                <option value="">Selecciona una editorial</option>
                                 @foreach ($publishers as $publisher)
                                     <option value='{{ $publisher->id }}'>{{ $publisher->name }}</option>";
                                 @endforeach
