@@ -5,7 +5,7 @@
 ## Quick Start 
 clone the repo
 ```
-    git clone **link**
+git clone **link**
 ```
 
 change current directory
@@ -110,7 +110,7 @@ php artisan serve
 
 ### Credenciales
 ```text
-usuario: tauseedzaman
+usuario: prueba
 contraseña: password
 >>>>>>> 07cde3bbbc78c814b3c8e8b34c0c84dd0c8a95a7
 ```
